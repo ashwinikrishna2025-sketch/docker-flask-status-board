@@ -11,3 +11,6 @@ known-first-party = ["app"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+# Make `app` importable from the project root, so a bare `pytest` works the
+# same as `python -m pytest` (which silently adds the current directory).
+pythonpath = ["."]
