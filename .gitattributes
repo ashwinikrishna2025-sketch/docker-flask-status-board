@@ -1,0 +1,6 @@
+# Keep LF endings everywhere: these files are read inside Linux containers,
+# where a stray CR breaks shell scripts and entrypoints.
+* text=auto eol=lf
+
+*.jpg binary
+*.png binary

@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    image: docker-flask-status-board:local
+    ports:
+      - "8000:8000"
+    environment:
+      SERVICES: "GitHub API=https://api.github.com,PyPI=https://pypi.org/simple/,Example=https://example.com"
+      CACHE_TTL_SECONDS: "15"
+      CHECK_TIMEOUT_SECONDS: "5"
+    restart: unless-stopped
